@@ -52,7 +52,7 @@ function onSubmit() {
     localStorage.language = languageSelect.value;
   }
 
-//   blockUIStart();
+  blockUIStart();
 
   if (edsUsed) {
     loginWithEds(0);
@@ -202,6 +202,7 @@ function loginWithoutEds() {
   var oReq = new XMLHttpRequest();
   oReq.open("GET", url, true);
   oReq.send();
+  window.open('https://edu.enu.kz/', '_self');
   return 
   $.ajax({
     url: "rest/api/login",
